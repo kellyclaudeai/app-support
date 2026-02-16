@@ -1,0 +1,98 @@
+{
+  "defaults": {
+    "DEVELOPER_NAME": "Austen Allred",
+    "SUPPORT_EMAIL": "support@kellyclaudeai.com"
+  },
+  "apps": [
+    {
+      "slug": "focusedfasting",
+      "name": "FocusedFasting",
+      "tagline": "Simple intermittent fasting tracker",
+      "description": "FocusedFasting helps you track your intermittent fasting schedule with a beautiful, distraction-free interface. Set your fasting window, get reminders, and track your progress over time.",
+      "custom_data_collection": "<li>Fasting schedules and history</li><li>Weight tracking data (if enabled)</li>",
+      "third_party_section": "",
+      "custom_faq": "",
+      "custom_disclaimer": ""
+    },
+    {
+      "slug": "parkpin",
+      "name": "ParkPin - Find My Car",
+      "tagline": "Never lose your parked car again",
+      "description": "ParkPin helps you remember where you parked. Simply tap to save your location, and the app will guide you back to your car with directions and distance.",
+      "custom_data_collection": "<li>Saved parking locations</li><li>Location data (only when saving a spot)</li>",
+      "third_party_section": "<h2>Location Services</h2><p>ParkPin uses your device's location to save parking spots. Location data is stored locally on your device and is never transmitted to our servers.</p>",
+      "custom_faq": "<div class=\"faq\"><h3>Why does the app need my location?</h3><p>ParkPin needs location access to save where you parked and to help guide you back to your car. We only access your location when you tap \"Save\" and when navigating back.</p></div>",
+      "custom_disclaimer": ""
+    },
+    {
+      "slug": "subwatcher",
+      "name": "SubWatcher",
+      "tagline": "Track all your subscriptions in one place",
+      "description": "SubWatcher helps you manage and track all your subscriptions. See your total monthly spend, get renewal reminders, and never forget about a subscription again.",
+      "custom_data_collection": "<li>Subscription details you enter</li><li>Reminder preferences</li>",
+      "third_party_section": "",
+      "custom_faq": "<div class=\"faq\"><h3>Does SubWatcher connect to my bank?</h3><p>No. SubWatcher does not connect to any financial accounts. You manually enter your subscriptions, keeping your financial data private and secure.</p></div>",
+      "custom_disclaimer": ""
+    },
+    {
+      "slug": "hydrotrack",
+      "name": "HydroTrack - Water Reminder",
+      "tagline": "Stay hydrated throughout the day",
+      "description": "HydroTrack helps you drink more water by tracking your daily intake and sending smart reminders. Set your daily goal and watch your hydration improve.",
+      "custom_data_collection": "<li>Water intake logs</li><li>Daily hydration goals</li><li>Reminder preferences</li>",
+      "third_party_section": "",
+      "custom_faq": "<div class=\"faq\"><h3>How much water should I drink?</h3><p>The app suggests a default goal based on general guidelines, but you can customize it. Consult a healthcare professional for personalized advice.</p></div>",
+      "custom_disclaimer": "<p><strong>Health Disclaimer:</strong> HydroTrack is for informational purposes only and is not medical advice. Consult a healthcare professional for personalized hydration recommendations.</p>"
+    },
+    {
+      "slug": "warrantyvault",
+      "name": "WarrantyVault Pro",
+      "tagline": "All your warranties in one place",
+      "description": "WarrantyVault Pro helps you organize and track warranties for all your products. Store receipts, warranty cards, and get notified before warranties expire.",
+      "custom_data_collection": "<li>Warranty details and documents</li><li>Product photos and receipts</li><li>Expiration reminder preferences</li>",
+      "third_party_section": "",
+      "custom_faq": "<div class=\"faq\"><h3>Are my receipts and documents secure?</h3><p>Yes. All documents are stored locally on your device or in your personal iCloud account. We never have access to your warranty documents.</p></div>",
+      "custom_disclaimer": ""
+    },
+    {
+      "slug": "parkmark",
+      "name": "ParkMark - Car Finder",
+      "tagline": "Find your parked car with ease",
+      "description": "ParkMark helps you remember where you parked with one-tap saving and easy navigation back to your vehicle.",
+      "custom_data_collection": "<li>Saved parking locations</li><li>Location data (only when saving)</li>",
+      "third_party_section": "<h2>Location Services</h2><p>ParkMark uses your device's location to save parking spots. Location data is stored locally and never sent to external servers.</p>",
+      "custom_faq": "",
+      "custom_disclaimer": ""
+    },
+    {
+      "slug": "recipesnap",
+      "name": "RecipeSnap - No Bloat",
+      "tagline": "Recipes without the life story",
+      "description": "RecipeSnap extracts just the recipe from any webpage - no scrolling through endless stories. Save, organize, and cook with distraction-free recipes.",
+      "custom_data_collection": "<li>Saved recipes</li><li>Recipe collections/folders</li>",
+      "third_party_section": "",
+      "custom_faq": "",
+      "custom_disclaimer": ""
+    },
+    {
+      "slug": "musclematch",
+      "name": "MuscleMatch",
+      "tagline": "Find your perfect workout",
+      "description": "MuscleMatch helps you discover exercises tailored to your goals, equipment, and fitness level. Build custom workouts and track your progress.",
+      "custom_data_collection": "<li>Workout history</li><li>Exercise preferences</li><li>Fitness goals</li>",
+      "third_party_section": "",
+      "custom_faq": "",
+      "custom_disclaimer": "<p><strong>Fitness Disclaimer:</strong> MuscleMatch provides general fitness information. Consult a healthcare professional before starting any exercise program.</p>"
+    },
+    {
+      "slug": "looksmaxxing",
+      "name": "Looksmaxxing - AI Analysis",
+      "tagline": "AI-powered appearance optimization",
+      "description": "Looksmaxxing uses advanced AI to analyze your photos and provide personalized recommendations for skincare, grooming, fitness, and style improvements.",
+      "custom_data_collection": "<li>Photos you submit for analysis</li><li>Profile information (age, goals, etc.)</li><li>Analysis results and recommendations</li>",
+      "third_party_section": "<h2>AI Analysis (OpenAI)</h2><p>Photos are sent to OpenAI's API for analysis. Photos are processed in real-time and are not stored on OpenAI's servers beyond the analysis session. OpenAI's privacy policy applies to this processing.</p><p>We do not store your photos on our servers. Analysis results are stored locally on your device.</p>",
+      "custom_faq": "<div class=\"faq\"><h3>Are my photos stored somewhere?</h3><p>Your photos are sent to OpenAI for analysis but are not permanently stored. Results are saved locally on your device only.</p></div><div class=\"faq\"><h3>Is the AI advice medical advice?</h3><p>No. The AI provides general appearance and lifestyle suggestions. For medical concerns, consult a healthcare professional.</p></div>",
+      "custom_disclaimer": "<p><strong>AI Disclaimer:</strong> Recommendations are generated by AI and are for informational purposes only. Results may vary. This is not medical, dermatological, or professional advice. Consult appropriate professionals before making significant changes to your health or appearance routine.</p>"
+    }
+  ]
+}
