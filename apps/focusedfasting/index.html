@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusedFasting - Simple Intermittent Fasting Timer</title>
+    <meta name="description" content="Track your intermittent fasting with a beautiful, distraction-free timer. Popular schedules like 16:8, 18:6, and 20:4 built in.">
+    <meta property="og:title" content="FocusedFasting - Simple Intermittent Fasting Timer">
+    <meta property="og:description" content="Track your intermittent fasting with a beautiful, distraction-free timer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kellyclaudeai.github.io/app-support/apps/focusedfasting/">
+    <link rel="apple-touch-icon" href="icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 48px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(90deg, #ff6b35, #f7931e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: #a0a0a0;
+            margin-bottom: 32px;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #ffffff;
+            color: #000000;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255,255,255,0.2);
+        }
+        
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #ff6b35;
+        }
+        
+        .feature-card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .benefits h2 {
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+        }
+        
+        .benefits p {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .benefit-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .benefit-tag {
+            background: rgba(255,107,53,0.2);
+            color: #ff6b35;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .stars {
+            color: #ffc107;
+        }
+        
+        .review-quote {
+            font-style: italic;
+            color: #a0a0a0;
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(255,255,255,0.02);
+            border-radius: 24px;
+            margin-top: 40px;
+        }
+        
+        .cta h2 {
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+        }
+        
+        .cta p {
+            color: #a0a0a0;
+            margin-bottom: 24px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        
+        footer a:hover {
+            color: #ff6b35;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="app-icon">🍽️</div>
+            <h1>FocusedFasting</h1>
+            <p class="tagline">Simple intermittent fasting that actually works</p>
+            <a href="https://apps.apple.com/app/focusedfasting/id6759063065" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Download Free
+            </a>
+        </section>
+        
+        <!-- Features -->
+        <section class="features">
+            <h2>Everything you need. Nothing you don't.</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Popular Schedules</h3>
+                    <p>16:8, 18:6, 20:4, and custom schedules. Pick what works for your lifestyle.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Progress</h3>
+                    <p>See your fasting streaks, weekly stats, and celebrate your consistency.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Reminders</h3>
+                    <p>Get notified when it's time to start or end your fast. Never miss a window.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Beautiful Design</h3>
+                    <p>Clean, distraction-free interface with dark mode. A timer that's a joy to use.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits -->
+        <section class="benefits">
+            <h2>Finally, fasting without the fuss</h2>
+            <p>Other fasting apps are bloated with features you'll never use. FocusedFasting does one thing perfectly: help you fast.</p>
+            <div class="benefit-list">
+                <span class="benefit-tag">No account required</span>
+                <span class="benefit-tag">No calorie counting</span>
+                <span class="benefit-tag">No food logging</span>
+                <span class="benefit-tag">No complicated setup</span>
+                <span class="benefit-tag">Just fasting</span>
+            </div>
+        </section>
+        
+        <!-- Social Proof -->
+        <section class="social-proof">
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>4.9</span>
+            </div>
+            <p class="review-quote">"Finally, a fasting app that doesn't try to be everything. Clean, simple, and actually helps me stick to my schedule."</p>
+        </section>
+        
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Start your fasting journey today</h2>
+            <p>Free to download. No account needed. Just tap and fast.</p>
+            <a href="https://apps.apple.com/app/focusedfasting/id6759063065" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Download Free
+            </a>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="support.html">Support</a>
+                <a href="terms.html">Terms</a>
+            </p>
+            <p style="margin-top: 16px;">© 2026 Kelly Claude AI. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
